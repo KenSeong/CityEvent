@@ -1,115 +1,63 @@
 <!-- <p>mes-activites works!</p> -->
 
 
-<nav class="navbar navbar-light bg-light ">
+<nav class="navbar navbar-light bg-light " >
     <div class="container-fluid">
-        <a href="" [routerLink]="['/compte/id']"></a>
-            <i class="bi bi-arrow-left" style=";"></i>
+        <div class="arrow-div">
+            <a href="" [routerLink]="['/compte/id']">
+                <i class="bi bi-arrow-left" style="color: black;"></i>
+            </a>
+        </div>
         
         <i class="bi bi-list"></i>
     </div>
 </nav>
 
-<button type="button" class="btn btn-primary btn-lg" (click)= "displayActive(true)">A venir</button>
-<button type="button" class="btn btn-secondary btn-lg" (click)= "displayActive(false)">Passées</button>
-
-<div class="Actived" *ngIf="Active">
-    <div *ngFor="let activity of activeActivities">
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">dazdazd</h5>
-                <p class="card-text">dazdazd</p>
-                <a href="#" class="btn btn-primary">Voir</a>
-            </div>
-        </div>
-
-
-<i class="bi bi-eye-fill" ></i>
-
-<!-- *ngFor -->
-        <div class="card" style="width: 18rem;">    
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">zdazd</h5>
-                <p class="card-text">dazda</p>
-                <a href="#" class="btn btn-primary">Voir</a>
-            </div>
-        </div>
-
-<i class="bi bi-eye-fill"></i>
-
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">dazd</h5>
-                <p class="card-text">dazd</p>
-                <a href="#" class="btn btn-primary">Voir</a>
-            </div>
-        </div>
+<div class="double-button">
+    <button type="button" class="btn btn-primary btn-lg" style="border-radius: 0px;" (click)= "displayActive(true)">A venir</button>
+    <button type="button" class="btn btn-secondary btn-lg" style="border-radius: 0px;" (click)= "displayActive(false)">Passées</button>
 </div>
 
-<i class="bi bi-eye-fill" ></i>
 
-
-
-<div class="passed" *ngIf="!Active" >
-    <div *ngFor="let activity of previousActivities">
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">da</h5>
-                <p class="card-text">dazd</p>
-                <a href="#" class="btn btn-primary">Voir</a>
+<div class="actived" *ngIf="Active">
+    <div class="previous-card-group" *ngFor="let activity of previousActivities">
+        <div class="eye-card">
+            <div class="card" style="width: 18rem;">
+                <img src="../assets/images/eiffel-tower.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{activity.title}}</h5>
+                    <p class="card-text">{{activity.description}}</p>
+                    <a href="#" class="btn btn-primary">Voir</a>
+                </div>
             </div>
-        </div>
-    
-    <i class="bi bi-eye-fill" ></i>
-    
-    <!-- *ngFor -->
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn btn-primary">Voir</a>
-            </div>
-        </div>
-    
-    <i class="bi bi-eye-fill"   ></i>
-    
-    
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">azdaz</h5>
-                <p class="card-text">dddazd</p>
-                <a href="#" class="btn btn-primary">Voir</a>
-            </div>
+            <i class="bi bi-eye-fill eye-icon" (click)="hideActivity(activity.id)"></i>
         </div>
     </div>
 </div>
+
+
+
+
+
+<div *ngIf="!Active">
+    <div class="previous-card-group" *ngFor="let activity of previousActivities">
+        <div class="eye-card">
+            <div class="card" style="width: 18rem;">
+                <img src="../assets/images/eiffel-tower.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{activity.title}}</h5>
+                    <p class="card-text">{{activity.description}}</p>
+                    <a href="#" class="btn btn-primary">Voir</a>
+                </div>
+            </div>
+            <i class="bi bi-eye-fill eye-icon" (click)="hideActivity(activity.id)"></i>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer">
     
-    <i class="bi bi-eye-fill" ></i>
+</div>
 
-<div class="container my-5">
-
-    <footer class="bg-dark text-center text-white">
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-        <!-- Section: Social media -->
-        <section class="mb-1">
-        
-        </section>
-        <!-- Section: Social media -->
-    </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-    </footer>
     

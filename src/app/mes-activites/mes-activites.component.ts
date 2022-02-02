@@ -14,6 +14,7 @@ export class MesActivitesComponent implements OnInit {
   previousActivities : EventActivity[] = [];
 
   Active : boolean = true;
+  Previous : boolean = false;
   constructor(private eventservice: EventActivitiesService) { }
 
   ngOnInit(): void {
@@ -33,7 +34,13 @@ export class MesActivitesComponent implements OnInit {
 
   displayActive(state : boolean) {
     this.Active = state;
+    this.Previous = !this.Active;
+    console.log(this.Active);
   }
+
+  // displayPrevious(state : boolean) {
+  //   this.Previous = state;
+  // }
 
 
 }
