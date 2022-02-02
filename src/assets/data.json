@@ -1,28 +1,70 @@
 {
-    "lastActivities": [
+    "activeActivities": [
         {
             "id": "0001",
             "title": "Event1",
             "adresse":  "Lieu1",
-            "description":  "Description1"
+            "description":  "Description1",
+            "visible": false
         },
         {
             "id": "0002",
             "title": "Event2",
             "adresse":  "Lieu2",
-            "description":  "Description2"
+            "description":  "Description2",
+            "visible": false
         },
         {
             "id": "0003",
             "title": "Event3",
             "adresse":  "Lieu3",
-            "description":  "Description3"
+            "description":  "Description3",
+            "visible": false
         },
         {
             "id": "0004",
             "title": "Event4",
             "adresse":  "Lieu4",
-            "description":  "Description4"
+            "description":  "Description4",
+            "visible": false
+        }
+    ],
+
+    "previousActivities": [
+        {
+            "id": "0005",
+            "title": "Event5",
+            "adresse":  "Lieu5",
+            "description":  "Description5",
+            "visible": false
+        },
+        {
+            "id": "0006",
+            "title": "Event6",
+            "adresse":  "Lieu6",
+            "description":  "Description6",
+            "visible": false
+        },
+        {
+            "id": "0007",
+            "title": "Event7",
+            "adresse":  "Lieu7",
+            "description":  "Description7",
+            "visible": false
+        },
+        {
+            "id": "0008",
+            "title": "Event8",
+            "adresse":  "Lieu8",
+            "description":  "Description8",
+            "visible": false
+        },
+        {
+            "id": "0009",
+            "title": "Event9",
+            "adresse":  "Lieu9",
+            "description":  "Description9",
+            "visible": false
         }
     ]
 }
