@@ -9,20 +9,32 @@ import { UserStorageService } from '../user-storage.service';
   styleUrls: ['./compte.component.css']
 })
 
+// Hobbies:[]=[{sport ='"<i class="bi bi-incognito icon-activity"></i>"'}
+//   ,
+//   cinema='"<i class="bi bi-incognito icon-activity"></i>"',
+//   art:'<i class="bi bi-incognito icon-activity"></i>',
+//   litterature:<i class="bi bi-incognito icon-activity"></i>"
+// ]
+
+
 export class CompteComponent implements OnInit {
-  name='John Doe';
-  localisation='Creil';
-  imgprofil='/assets/img/PhotoProfil.jpg';
+  // name='John Doe';
+  // region='Creil';
+  imgprofil='/assets/img/PhotoProfil.jpg'; //avatar dans le code céline
+  
+
+  user:usersdata|null=null;
 
   
-  user:usersdata|null=null;
-  
+
   constructor(private router:Router, private route:ActivatedRoute, private storage: UserStorageService) { }
 
   ngOnInit(): void {
+    this.storage.init();
     this.route.paramMap.subscribe(param=>{
-    this.user = this.storage.getUser(param.get('id')) as users;
+    this.user = this.storage.getUser(param.get('userid')) as usersdata;
     })
+    console.log(this.user);
   }
 
 }

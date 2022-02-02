@@ -35,7 +35,6 @@
             "password":  "password1",
             "hobbies": ["sport", "cinema", "art", "litterature"],
             "region": "hautdefrance"
-              
         },
         {
             "id": "2",
@@ -61,7 +60,7 @@
             "hobbies": ["sport", "cinema"],
             "region": "limousin"
         }
-       
+    
     ],
 
     "Hobbies" : [
@@ -76,10 +75,10 @@
     "Region" : [
 
         
-             "hautdefrance",
-             "iledefrance",
-             "auvergne",
-             "limousin"
+            "hautdefrance",
+            "iledefrance",
+            "auvergne",
+            "limousin"
         
     ]
 

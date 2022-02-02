@@ -13,67 +13,84 @@
     </div>
 </nav>
 
-<header [ngStyle]="{'background': 'url(/assets/img/wallpaper.jpg) no-repeat center / cover '}" class="container-fluid">
-    <div class="d-flex">
+<header  class="container-fluid">
+    <div class="container d-flex">
         <div class="row">
-            <div class="col">
-                <img src="{{imgprofil}}" alt="" style="border-radius: 100%; margin: 10%; height: 80%; max-height: 200px">
+            <div class="col container-fluid">
+                <img src="{{imgprofil}}" id="imgprofil" alt="image de profil">
             </div>
-            <div class="col" style="padding-top: 30%;">
-                <div style="margin: 15%;">
+            <div class="col" id="inputgroup">
+                <div class="input-group">
+                    <div class="input-group-text bg-transparent border-0">
+                        <i class="bi bi-person-circle"></i>
+                    </div>
+                    <input type="text" class="form-control" placeholder="{{user ? user.name: ''}}">
+                </div>
+                <!-- <div style="margin: 15%;">
                     <input type="text" placeholder="{{user ? user.name: ''}}" readonly>
+                </div> -->
+                <div class="input-group">
+                    <div class="input-group-text bg-transparent border-0">
+                        <i class="bi bi-geo"></i>
+                    </div>
+                    <input type="text" class="form-control textarea-autosize" placeholder="{{user ? user.region: ''}}">
                 </div>
-                <div style="margin: 15%;">
-                    <input type="text" placeholder="{{localisation}}" readonly>
-                </div>
-                <button class="btn-success" style="margin-left: 80%;margin-bottom: 15px;position: relative; bottom: 30px;"><i class="bi bi-pencil-square" style="font-size: 1.5rem;"></i></button>
+                <!-- <div style="margin: 15%;">
+                    <input type="text" placeholder="{{user ? user.region: ''}}" readonly>
+                </div> -->
+                <button class="btn btn-success" id="btn-modif">
+                    <i class="bi bi-pencil-square icon-modif"></i>
+                </button>
             </div>
+            
         </div>
     </div>
 </header>
 
 
 
-<div style="padding: 5px;">
-    <button class="btn-light"><i class="bi bi-tsunami" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-wrench" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-wind" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-robot" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-life-preserver" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-music-note-beamed" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-incognito" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-film" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-dribbble" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-dice-6" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-controller" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-cart" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-camera-reels" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-camera" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-boombox" style="font-size: 2rem;"></i></button>
-    <button class="btn-light"><i class="bi bi-binoculars" style="font-size: 2rem;"></i></button>
+<div id="boutons">
+
+    <button class="btn btn-light btn-activity"><i class="bi bi-tsunami icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-wrench icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-wind icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-robot icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-life-preserver icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-music-note-beamed icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-incognito icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-film icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-dribbble icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-dice-6 icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-controller icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-cart icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-camera-reels icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-camera icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-boombox icon-activity"></i></button>
+    <button class="btn btn-light btn-activity"><i class="bi bi-binoculars icon-activity"></i></button>
+
 </div>
 
 
 
 <div class="d-grid gap-2 m-2 col-11 mx-auto">
-    <button class="btn btn-outline-secondary btn-lg" type="button" [routerLink]="['/mes_activites/:userid']" style="font-size: 2.5em; font-weight: bolder; color:black; text-align: left; padding-left: 20%;"> <i class="bi bi-activity" style="font-size: 2rem;color:rgb(43, 40, 238);height: 36px;"></i> Activités </button>
+    <button class="btn btn-outline-secondary btn-lg btn-menu" type="button" [routerLink]="['/mes_activites/:userid']"> <i class="bi bi-activity"></i> Activités </button>
     <!-- routerLink Activity -->
 
-    <button class="btn btn-outline-secondary btn-lg" type="button" [routerLink]="['/messages','dfjdfjd']" style="font-size: 2.5em; font-weight: bolder; color:black;text-align: left; padding-left: 20%; "><i class="bi bi-envelope" style="font-size: 2rem;color:orange"></i> Messages</button>
+    <button class="btn btn-outline-secondary btn-lg btn-menu" type="button" [routerLink]="['/messages','dfjdfjd']"><i class="bi bi-envelope"></i> Messages</button>
     <!-- routerLink Messagerie -->
 
-    <button class="btn btn-outline-secondary btn-lg" type="button" [routerLink]="['/parametres/:userid']" style="font-size: 2.5em; font-weight: bolder; color:black;text-align: left; padding-left: 20%;">
-        <i class="bi bi-tools" style="font-size: 2rem;color:red"></i> Paramètres</button>
+    <button class="btn btn-outline-secondary btn-lg btn-menu" type="button" [routerLink]="['/parametres/:userid']">
+        <i class="bi bi-tools"></i> Paramètres</button>
     <!-- routerLink Params -->
 
-    <button class="btn btn-outline-secondary btn-lg" type="button" [routerLink]="['/paiement/:userid']" style="font-size: 2.5em; font-weight: bolder; color:black;text-align: left; padding-left: 20%;"><i class="bi bi-credit-card" style="font-size: 2rem;color:rgb(187, 11, 134);height: 36px;"></i> Paiements</button>
+    <button class="btn btn-outline-secondary btn-lg btn-menu" type="button" [routerLink]="['/paiement/:userid']"><i class="bi bi-credit-card"></i> Paiements</button>
     <!-- routerLink Paiement -->
 
-    <button class="btn btn-outline-secondary btn-lg" type="button" [routerLink]="['/contact/:userid']" style="font-size: 2.5em; font-weight: bolder; color:black;text-align: left; padding-left: 20%;"> <i class="bi bi-patch-question" style="font-size: 2rem;color:green"></i> Aides</button>
+    <button class="btn btn-outline-secondary btn-lg btn-menu" type="button" [routerLink]="['/contact/:userid']"> <i class="bi bi-patch-question"></i> Aides</button>
     <!-- routerLink Aides -->
 </div>
 
 
-<footer class="fixed-bottom" style="height: 10%;background: black; text-align:center; align-items: center; padding: 10px; ">
-    <img src="/assets/img/logo.png" alt="" style="height: 60px; background: white; padding: 5px; margin: auto; border-radius: 60px;">
-</footer>
+<div class="fixe-bottom">
+    <img src="/assets/img/logo.png" alt="logo" id="footerimg">
+</div>
