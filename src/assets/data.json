@@ -65,21 +65,21 @@
     ],
 
     "Hobbies" : [
-        
-            "sport",
-            "cinema",
-            "art",
-            "litterature"
+        {
+            "listHobbies": ["sport", "cinema", "litterature", "art"]
+            
+        }
+          
         
     ],
 
     "Region" : [
 
-        
-             "hautdefrance",
-             "iledefrance",
-             "auvergne",
-             "limousin"
+        {
+            "listRegions": ["hautdefrance", "iledefrance", "limousin", "auvergne" ]
+            
+        }
+             
         
     ]
 

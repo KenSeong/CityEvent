@@ -9,6 +9,7 @@ import { FilDactuComponent } from './fil-dactu/fil-dactu.component';
 import { InfoEventComponent } from './info-event/info-event.component';
 import { InscriptionActiviteComponent } from './inscription-activite/inscription-activite.component';
 import { LoginSignupComponent } from './login-signup/login-signup.component';
+import { SignupComponent } from './signup/signup.component';
 import { MesActivitesComponent } from './mes-activites/mes-activites.component';
 import { PaiementComponent } from './paiement/paiement.component';
 import { ParametresComponent } from './parametres/parametres.component';
@@ -50,6 +51,10 @@ const routes: Routes = [
   {
     path: "login",
     component: LoginSignupComponent
+  },
+  {
+    path: "signup",
+    component: SignupComponent
   },
   {
     path: "mes_activites/:userid",

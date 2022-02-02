@@ -1,0 +1,59 @@
+
+
+  <body class="container d-flex h-100vh">
+
+    <div class="row align-items-start align-self-center m-auto">
+      <div class="mb-5 row">
+          <label for="name" class="col-sm-2 col-form-label"></label>
+          <div class="col-sm-10">
+            <input type="name" class="name" id="Name" [formControl] ="nameValue" placeholder="name">
+          </div>
+        </div>
+        <div class="mb-5 row">
+          <label for="inputEmail" class="col-sm-2 col-form-label"></label>
+          <div class="col-sm-10">
+            <input type="email" class="email" id="staticEmail" [formControl] ="emailValue" placeholder="email@example.com">
+          </div>
+        </div>
+        <div class="mb-5 row">
+          <label for="inputPassword" class="col-sm-2 col-form-label"></label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword" [formControl] ="passwordValue"   placeholder="password">
+          </div>
+        </div>
+        <select (change)="selectChangeHandler($event)" class="form-select" aria-label="Default select example">
+          <option selected>Hobbies</option>
+          <option value="1">Sport</option>
+          <option value="2">Cinéma</option>
+          <option value="3">Litérature</option>
+          <option value="4">Nature</option>
+          <option value="5">Voyage</option>
+        </select>
+        <select (change)="selectChangeHandler($event)" class="form-select" aria-label="Default select example">
+          <option selected>Région</option>
+          <option value="1">Hauts de France</option>
+          <option value="2">Ile de France</option>
+          <option value="3">Aquitaine</option>
+          <option value="4">Languedoc</option>
+          <option value="5">Auvergne</option>
+        </select>
+        <div class="d-grid gap-2 col-6 mx-auto mb-5">
+          <button class="btn btn-primary" type="submit" (click)="inscription()">Inscription</button>
+        </div>
+</div>
+  </body>
+    
+<!-- <select (change)="selectChangeHandler($event)">
+  <option value="Monday">Monday</option>
+  <option value="Tuesday">Tuesday</option>
+  <option value="Wednesday">Wednesday</option>
+  <option value="Thursday">Thursday</option>
+  <option value="Friday">Friday</option>
+</select> -->
+<!-- selectedDay: string = '';
+
+  //event handler for the select element's change event
+  selectChangeHandler (event: any) {
+    //update the ui
+    this.selectedDay = event.target.value;
+  } -->

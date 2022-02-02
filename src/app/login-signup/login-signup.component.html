@@ -1,1 +1,32 @@
-<p>login-signup works!</p>
+
+  <body class="container d-flex h-100vh">
+    
+      
+      <div  class="row align-items-start align-self-center m-auto">
+          <div class="mb-5 row">
+              <label for="inputEmail" class="col-sm-2 col-form-label"></label>
+              <div class="col-sm-10">
+                <input type="email" class="email" id="staticEmail" [formControl] ="emailValue" placeholder="email@example.com">
+              </div>
+            </div>
+            <div class="mb-5 row">
+              <label for="inputPassword" class="col-sm-2 col-form-label"></label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword" [formControl] ="passwordValue" placeholder="password">
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-4 mx-auto mb-5">
+              <button class="btn btn-primary" type="button" (click) ="connexion()">Connexion</button>
+            </div>
+            <button type="button" class="btn btn-link" [routerLink] ="['/signup']">Inscription</button> 
+  </div>
+  </body>
+
+
+
+
+
+
+
+
+
