@@ -13,6 +13,7 @@ import { MesActivitesComponent } from './mes-activites/mes-activites.component';
 import { PaiementComponent } from './paiement/paiement.component';
 import { ParametresComponent } from './parametres/parametres.component';
 import { ProfilComponent } from './profil/profil.component';
+import { MessagesComponent } from './messages/messages.component';
 
 const routes: Routes = [
   {
@@ -57,7 +58,7 @@ const routes: Routes = [
   },
   {
     path: "messages/:userid",
-    component: MessageChannel
+    component: MessagesComponent
   },
   {
     path: "paiement/:userid",
