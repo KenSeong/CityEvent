@@ -19,7 +19,7 @@ export class UserStorageService {
     return;
   } 
   for (const user of usersJsonFile.Users) {
-    this.users.push(new usersdata(user.id, user.name, user.region, user.avatar, user.cover))
+    this.users.push(new usersdata(user.id, user.name, user.region, user.avatar, user.cover, user.hobbies))
   }
   this.initialized = true;
   };

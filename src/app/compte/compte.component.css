@@ -1,10 +1,10 @@
 *{
     box-sizing: border-box;
 }
-/* header{
-    background: url(../../assets/img/wallpaper.jpg) no-repeat center / cover; 
-    max-height: 15%;
-} */
+header{
+    /* background: url(../../assets/img/wallpaper.jpg) no-repeat center / cover;  */
+    min-height: 100px;
+}
 /* #inputgroup{ */
     /* border-radius: 100%;  */
     /* margin: 10%;  */
@@ -68,7 +68,7 @@
     border-radius: 10px;
 }
 .btn-menu{
-    font-size: 2.5em; 
+    font-size: 1.8em; 
     font-weight: bolder; 
     color:black;
     text-align: left; 
@@ -95,6 +95,13 @@
 .bi-patch-question{
     font-size: 2.5rem;
     color:green;
+}
+.bi-power{
+    font-size: 2.5rem;
+    /* color:linear-gradient(green red) ; */
+    background: -webkit-linear-gradient(rgb(43, 40, 238),orange, red,rgb(187, 11, 134),green);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 .fixe-bottom {
     height: 10%;
