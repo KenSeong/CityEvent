@@ -20,7 +20,7 @@ import { UserStorageService } from '../user-storage.service';
 export class CompteComponent implements OnInit {
   // name='John Doe';
   // region='Creil';
-  imgprofil='/assets/img/PhotoProfil.jpg'; //avatar dans le code céline
+  // imgprofil='/assets/img/PhotoProfil.jpg'; //avatar dans le code céline
   
 
   user:usersdata|null=null;
@@ -36,5 +36,5 @@ export class CompteComponent implements OnInit {
     })
     console.log(this.user);
   }
-
+  useravat : string= "wallpaper.jpg"; // faire l'acquisition en dynamique
 }
