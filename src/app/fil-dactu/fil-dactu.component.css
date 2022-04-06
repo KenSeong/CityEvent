@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+#logo{
+    width: 30px;
+}
+
+
+.fixe-bottom {
+    height: 10%;
+    background: black; 
+    text-align:center;
+    padding: 20px;
+    /* margin-bottom: 0px; */
+    margin-top: 20px;
+    bottom: 0;
+}
+#footerimg{
+    height: 60px;
+    background: white; 
+    padding: 5px; 
+    margin: auto; 
+    border-radius: 60px;
+}

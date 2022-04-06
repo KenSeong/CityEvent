@@ -24,7 +24,6 @@ export class CompteComponent implements OnInit {
   
 
   user:usersdata|null=null;
-
   
 
   constructor(private router:Router, private route:ActivatedRoute, private storage: UserStorageService) { }
@@ -35,6 +34,12 @@ export class CompteComponent implements OnInit {
     this.user = this.storage.getUser(param.get('userid')) as usersdata;
     })
     console.log(this.user);
+    console.log(this.user?.hobbies);
   }
   useravat : string= "wallpaper.jpg"; // faire l'acquisition en dynamique
+
+  
+
+
+
 }
